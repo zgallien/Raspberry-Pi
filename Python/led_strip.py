@@ -66,8 +66,8 @@ class RGBStrip(object):
     def setup_pins(self):
 
         GPIO.setup(self.red_pin, GPIO.OUT)
-        GPIO.setup(self.red_pin, GPIO.OUT)
-        GPIO.setup(self.red_pin, GPIO.OUT)
+        GPIO.setup(self.green_pin, GPIO.OUT)
+        GPIO.setup(self.blue_pin, GPIO.OUT)
 
 if __name__ == '__main__':
 
