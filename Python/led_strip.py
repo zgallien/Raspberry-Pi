@@ -93,6 +93,6 @@ if __name__ == '__main__':
 
     rgb = RGBStrip(27, 17, 22)
 
-    rgb.rgb_on()
+    # rgb.rgb_on()
 
     rgb.rgb_off()
