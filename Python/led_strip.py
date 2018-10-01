@@ -45,6 +45,10 @@ class RGBStrip(object):
 
         time.sleep(5)
 
+	GPIO.output(self.red_pin, 10)
+        GPIO.output(self.green_pin, 0)
+        GPIO.output(self.blue_pin, 0)
+
         # while True:
         #
         #     GPIO.output(self.red_pin, r_intensity)
