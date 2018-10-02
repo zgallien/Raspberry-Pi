@@ -86,36 +86,40 @@ if __name__ == '__main__':
 
     rgb = RGBStrip(27, 17, 22)
 
-    if sys.argv[1].lower() == 'red':
+    try:
 
-        rgb.red_on()
+        if sys.argv[1].lower() == 'red':
 
-    elif sys.argv[1].lower() == 'green':
+            rgb.red_on()
 
-        rgb.green_on()
+        elif sys.argv[1].lower() == 'green':
 
-    elif sys.argv[1].lower() == 'blue':
+            rgb.green_on()
 
-        rgb.blue_on()
+        elif sys.argv[1].lower() == 'blue':
 
-    elif sys.argv[1].lower() == 'cycle':
+            rgb.blue_on()
 
-        rgb.rgb_cycle()
+        elif sys.argv[1].lower() == 'cycle':
 
-    elif sys.argv[1].lower() not in ['red', 'green', 'blue', 'cycle']:
+            rgb.rgb_cycle()
 
-        print 'Did not recognize {} argument. Please use on of the following:' \
+
+        elif sys.argv[1].lower() not in ['red', 'green', 'blue', 'cycle']:
+
+            print 'Did not recognize {} argument. Please use on of the following:' \
+                  '\nred' \
+                  '\ngreen' \
+                  '\nblue' \
+                  '\ncycle'.format(
+                            sys.argv[1]
+                            )
+
+    except IndexError as e:
+
+        print '{}' \
+              '\nPlease run again and use one of the following as an argument:' \
               '\nred' \
               '\ngreen' \
               '\nblue' \
-              '\ncycle'.format(
-                        sys.argv[1]
-                        )
-
-    elif len(sys.argv) == 1:
-
-        print 'Please run again and use one of the following as an argument:' \
-              '\nred' \
-              '\ngreen' \
-              '\nblue' \
-              '\ncycle'
+              '\ncycle'.format(e)
