@@ -104,14 +104,18 @@ if __name__ == '__main__':
 
             rgb.rgb_cycle()
 
+        elif sys.argv[1].lower() == 'off':
 
-        elif sys.argv[1].lower() not in ['red', 'green', 'blue', 'cycle']:
+            rgb.strip_off()
+
+        elif sys.argv[1].lower() not in ['red', 'green', 'blue', 'cycle, off']:
 
             print 'Did not recognize {} argument. Please use on of the following:' \
-                  '\nred' \
-                  '\ngreen' \
-                  '\nblue' \
-                  '\ncycle'.format(
+                  '\n\tred' \
+                  '\n\tgreen' \
+                  '\n\tblue' \
+                  '\n\tcycle' \
+                  '\n\toff'.format(
                             sys.argv[1]
                             )
 
@@ -119,7 +123,8 @@ if __name__ == '__main__':
 
         print '{}' \
               '\nPlease run again and use one of the following as an argument:' \
-              '\nred' \
-              '\ngreen' \
-              '\nblue' \
-              '\ncycle'.format(e)
+              '\n\tred' \
+              '\n\tgreen' \
+              '\n\tblue' \
+              '\n\tcycle' \
+              '\n\toff'.format(e)
